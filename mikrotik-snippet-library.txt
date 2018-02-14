@@ -1,0 +1,5 @@
+#Gateway IP Adresse von bestimmtem Interface ausgeben ohne Subnetmask
+:global gatewayIP [/ip address get [:pick [/ip address find interface="bridge-public"] 0] address];
+:put [:pick $gatewayIP 0 [:find $gatewayIP "/"]];
+
+# end of list
